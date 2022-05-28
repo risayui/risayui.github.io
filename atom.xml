@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://risayui.github.io</id>
+    <title>JIAE&apos;s Blog</title>
+    <updated>2022-05-28T10:52:10.501Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://risayui.github.io"/>
+    <link rel="self" href="https://risayui.github.io/atom.xml"/>
+    <subtitle>行远自迩，笃行不怠。</subtitle>
+    <logo>https://risayui.github.io/images/avatar.png</logo>
+    <icon>https://risayui.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2022, JIAE&apos;s Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[利用 Github Pages + Gridea 搭建自己的博客]]></title>
+        <id>https://risayui.github.io/post/li-yong-github-pages-gridea-da-jian-zi-ji-de-bo-ke/</id>
+        <link href="https://risayui.github.io/post/li-yong-github-pages-gridea-da-jian-zi-ji-de-bo-ke/">
+        </link>
+        <updated>2022-05-28T09:46:51.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="为什么要搭建自己的博客"><strong>为什么要搭建自己的博客</strong></h2>
+<ul>
+<li>锻炼自己表达、输出的能力。高考后便很少书写大段的文字，以至于现在语言匮乏、难以流畅地表达自己的观点、缺乏逻辑性。希望通过写博客复建、培养自己讲好故事的能力。</li>
+<li>记录自己的成长。</li>
+<li>培养动手能力。虽然国内已有不少知识分享的平台，但作为一个技术爱好者，还是很希望能部署自己的网页（哪怕是最简单的方式），在搭建和写文章的过程中也可以帮助自己熟悉 Git 操作与 Markdown 语法。</li>
+</ul>
+<h2 id="介绍"><strong>介绍</strong></h2>
+<ul>
+<li>Github Pages：GitHub 提供的免费服务，可以为 Github 仓库中的静态网页生成访问域名。<a href="https://pages.github.com/">https://pages.github.com/</a></li>
+<li>Gridea：一个静态博客写作客户端，帮助你更容易地构建并管理博客或任何静态站点。 <a href="https://gridea.dev/">https://gridea.dev/</a></li>
+<li>静态网站：静态网站是指全部由 HTML 页面组成的网站，所有的内容包含在网页文件中。不需要通过数据库工作。</li>
+</ul>
+<h2 id="创建托管仓库"><strong>创建托管仓库</strong></h2>
+<p>仓库名设为 username.github.io<br>
+<img src="https://risayui.github.io/post-images/1653732477162.png" alt="" loading="lazy"><br>
+创建后，点击仓库的 Settings-Pages<br>
+点击 choose a theme 设置好主题后，便可以通过网址访问博客了<br>
+<img src="https://risayui.github.io/post-images/1653732644674.png" alt="" loading="lazy"><br>
+<img src="https://risayui.github.io/post-images/1653732662776.png" alt="" loading="lazy"></p>
+<h2 id="申请personal-access-token"><strong>申请Personal access token</strong></h2>
+<p>点击头像-settings-developer settings-Personal access tokens-Generate new token<br>
+Note：随便写，说明 token 是来干什么用的。<br>
+Expiration：token 的到期时间，这里我嫌麻烦就选择永不过期<br>
+token 的权限只选择 repo<br>
+<img src="https://risayui.github.io/post-images/1653733249704.png" alt="" loading="lazy"><br>
+保存好生成的 token，<strong>它不会再显示第二次</strong></p>
+<h2 id="添加-gittalk-app"><strong>添加 Gittalk App</strong></h2>
+<p>添加 Gittalk 插件实现评论功能<br>
+点击头像-settings-developer settings-Oauth Apps-Register a new application<br>
+<img src="https://risayui.github.io/post-images/1653733427393.png" alt="" loading="lazy"><br>
+Application name 随意填写，两个 URL 都填写自己的博客地址（username.github.io）<br>
+<img src="https://risayui.github.io/post-images/1653733456686.png" alt="" loading="lazy"><br>
+生成 Client ID 和 Client secrets，注意保存好<br>
+<img src="https://risayui.github.io/post-images/1653733479481.png" alt="" loading="lazy"></p>
+<h2 id="配置gridea"><strong>配置Gridea</strong></h2>
+<p>基础配置，点击[检测远程连接]，确认连接成功后，保存。<br>
+<img src="https://risayui.github.io/post-images/1653733523193.png" alt="" loading="lazy"><br>
+评论插件配置，填入刚才生成的 Client ID 和 Client secrets<img src="https://risayui.github.io/post-images/1653733596578.png" alt="" loading="lazy"><br>
+完成配置后，点击同步，将代码 push 到 Github 仓库<br>
+刷新网址，可以看到网页配置已成功生效。<br>
+<img src="https://risayui.github.io/post-images/1653733671075.png" alt="" loading="lazy"></p>
+<h2 id="书写第一篇文章"><strong>书写第一篇文章</strong></h2>
+<p>完善 Gridea 默认生成的 about 文章<br>
+点击保存，可以预览发布效果<br>
+<img src="https://risayui.github.io/post-images/1653733711043.png" alt="" loading="lazy"><br>
+最后点击同步，可以看到文章已成功发布👏</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[关于]]></title>
+        <id>https://risayui.github.io/post/about/</id>
+        <link href="https://risayui.github.io/post/about/">
+        </link>
+        <updated>2022-05-28T09:31:25.000Z</updated>
+        <content type="html"><![CDATA[<p>欢迎来到JIAE的博客，很高兴遇见你！🤝</p>
+<h2 id="关于本站">🏠 关于本站</h2>
+<p>用于书写论文笔记、知识心得以及生活感悟。</p>
+<h2 id="博主是谁">👨‍💻 博主是谁</h2>
+<p>在读研究生，研究方向是网络内容安全、投毒攻击，毕业后想从事后台开发类的工作。</p>
+<h2 id="兴趣爱好">⛹ 兴趣爱好</h2>
+<p>日本偶像、单机游戏</p>
+<h2 id="联系我呀">📬 联系我呀</h2>
+<p>QQ：894634425</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Hello Gridea]]></title>
+        <id>https://risayui.github.io/post/hello-gridea/</id>
+        <link href="https://risayui.github.io/post/hello-gridea/">
+        </link>
+        <updated>2018-12-11T16:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
+✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
+✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+<!-- more -->
+<p><a href="https://github.com/getgridea/gridea">Github</a><br>
+<a href="https://gridea.dev/">Gridea 主页</a><br>
+<a href="https://fehey.com/">示例网站</a></p>
+<h2 id="特性">特性👇</h2>
+<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
+<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
+<p>🏷️  你可以对文章进行标签分组</p>
+<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
+<p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客户端</p>
+<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
+<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
+<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
+<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
+<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
+<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
+<p>未来，它一定会成为你离不开的伙伴</p>
+<p>尽情发挥你的才华吧！</p>
+<p>😘 Enjoy~</p>
+]]></content>
+    </entry>
+</feed>

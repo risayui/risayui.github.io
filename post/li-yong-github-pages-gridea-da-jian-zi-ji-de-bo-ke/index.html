@@ -1,0 +1,253 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>利用 Github Pages + Gridea 搭建自己的博客 | JIAE&#39;s Blog</title>
+<link rel="shortcut icon" href="https://risayui.github.io/favicon.ico?v=1653735126438">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://risayui.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="利用 Github Pages + Gridea 搭建自己的博客 | JIAE&#39;s Blog - Atom Feed" href="https://risayui.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="为什么要搭建自己的博客
+
+锻炼自己表达、输出的能力。高考后便很少书写大段的文字，以至于现在语言匮乏、难以流畅地表达自己的观点、缺乏逻辑性。希望通过写博客复建、培养自己讲好故事的能力。
+记录自己的成长。
+培养动手能力。虽然国内已有不少知识分享..." />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://risayui.github.io">
+  <img class="avatar" src="https://risayui.github.io/images/avatar.png?v=1653735126438" alt="">
+  </a>
+  <h1 class="site-title">
+    JIAE&#39;s Blog
+  </h1>
+  <p class="site-description">
+    行远自迩，笃行不怠。
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              利用 Github Pages + Gridea 搭建自己的博客
+            </h2>
+            <div class="post-info">
+              <span>
+                2022-05-28
+              </span>
+              <span>
+                3 min read
+              </span>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content" v-pre>
+                <h2 id="为什么要搭建自己的博客"><strong>为什么要搭建自己的博客</strong></h2>
+<ul>
+<li>锻炼自己表达、输出的能力。高考后便很少书写大段的文字，以至于现在语言匮乏、难以流畅地表达自己的观点、缺乏逻辑性。希望通过写博客复建、培养自己讲好故事的能力。</li>
+<li>记录自己的成长。</li>
+<li>培养动手能力。虽然国内已有不少知识分享的平台，但作为一个技术爱好者，还是很希望能部署自己的网页（哪怕是最简单的方式），在搭建和写文章的过程中也可以帮助自己熟悉 Git 操作与 Markdown 语法。</li>
+</ul>
+<h2 id="介绍"><strong>介绍</strong></h2>
+<ul>
+<li>Github Pages：GitHub 提供的免费服务，可以为 Github 仓库中的静态网页生成访问域名。<a href="https://pages.github.com/">https://pages.github.com/</a></li>
+<li>Gridea：一个静态博客写作客户端，帮助你更容易地构建并管理博客或任何静态站点。 <a href="https://gridea.dev/">https://gridea.dev/</a></li>
+<li>静态网站：静态网站是指全部由 HTML 页面组成的网站，所有的内容包含在网页文件中。不需要通过数据库工作。</li>
+</ul>
+<h2 id="创建托管仓库"><strong>创建托管仓库</strong></h2>
+<p>仓库名设为 username.github.io<br>
+<img src="https://risayui.github.io/post-images/1653732477162.png" alt="" loading="lazy"><br>
+创建后，点击仓库的 Settings-Pages<br>
+点击 choose a theme 设置好主题后，便可以通过网址访问博客了<br>
+<img src="https://risayui.github.io/post-images/1653732644674.png" alt="" loading="lazy"><br>
+<img src="https://risayui.github.io/post-images/1653732662776.png" alt="" loading="lazy"></p>
+<h2 id="申请personal-access-token"><strong>申请Personal access token</strong></h2>
+<p>点击头像-settings-developer settings-Personal access tokens-Generate new token<br>
+Note：随便写，说明 token 是来干什么用的。<br>
+Expiration：token 的到期时间，这里我嫌麻烦就选择永不过期<br>
+token 的权限只选择 repo<br>
+<img src="https://risayui.github.io/post-images/1653733249704.png" alt="" loading="lazy"><br>
+保存好生成的 token，<strong>它不会再显示第二次</strong></p>
+<h2 id="添加-gittalk-app"><strong>添加 Gittalk App</strong></h2>
+<p>添加 Gittalk 插件实现评论功能<br>
+点击头像-settings-developer settings-Oauth Apps-Register a new application<br>
+<img src="https://risayui.github.io/post-images/1653733427393.png" alt="" loading="lazy"><br>
+Application name 随意填写，两个 URL 都填写自己的博客地址（username.github.io）<br>
+<img src="https://risayui.github.io/post-images/1653733456686.png" alt="" loading="lazy"><br>
+生成 Client ID 和 Client secrets，注意保存好<br>
+<img src="https://risayui.github.io/post-images/1653733479481.png" alt="" loading="lazy"></p>
+<h2 id="配置gridea"><strong>配置Gridea</strong></h2>
+<p>基础配置，点击[检测远程连接]，确认连接成功后，保存。<br>
+<img src="https://risayui.github.io/post-images/1653733523193.png" alt="" loading="lazy"><br>
+评论插件配置，填入刚才生成的 Client ID 和 Client secrets<img src="https://risayui.github.io/post-images/1653733596578.png" alt="" loading="lazy"><br>
+完成配置后，点击同步，将代码 push 到 Github 仓库<br>
+刷新网址，可以看到网页配置已成功生效。<br>
+<img src="https://risayui.github.io/post-images/1653733671075.png" alt="" loading="lazy"></p>
+<h2 id="书写第一篇文章"><strong>书写第一篇文章</strong></h2>
+<p>完善 Gridea 默认生成的 about 文章<br>
+点击保存，可以预览发布效果<br>
+<img src="https://risayui.github.io/post-images/1653733711043.png" alt="" loading="lazy"><br>
+最后点击同步，可以看到文章已成功发布👏</p>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2"><strong>为什么要搭建自己的博客</strong></a></li>
+<li><a href="#%E4%BB%8B%E7%BB%8D"><strong>介绍</strong></a></li>
+<li><a href="#%E5%88%9B%E5%BB%BA%E6%89%98%E7%AE%A1%E4%BB%93%E5%BA%93"><strong>创建托管仓库</strong></a></li>
+<li><a href="#%E7%94%B3%E8%AF%B7personal-access-token"><strong>申请Personal access token</strong></a></li>
+<li><a href="#%E6%B7%BB%E5%8A%A0-gittalk-app"><strong>添加 Gittalk App</strong></a></li>
+<li><a href="#%E9%85%8D%E7%BD%AEgridea"><strong>配置Gridea</strong></a></li>
+<li><a href="#%E4%B9%A6%E5%86%99%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0"><strong>书写第一篇文章</strong></a></li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://risayui.github.io/post/about/">
+              <h3 class="post-title">
+                关于
+              </h3>
+            </a>
+          </div>
+        
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: '6a74581f06be8a056be6',
+    clientSecret: '49b8b4903b685e4984602805df2141baf356aea8',
+    repo: 'risayui.github.io',
+    owner: 'risayui',
+    admin: ['risayui'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://risayui.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>
